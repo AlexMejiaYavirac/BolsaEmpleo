@@ -15,8 +15,6 @@ class CreateProfessionalExperiencesTable extends Migration
     {
         Schema::connection('pgsql-bolsa_empleo')->create('professional_experiences', function (Blueprint $table) {
             $table->id();
-            //$table->integer('professional_id')->unsigned();
-            //$table->foreign('professional_id')->references('id')->on('professionals');
             $table->foreignId('professional_id')->constrained('professionals');
             $table->string('employer');
             $table->string('position');

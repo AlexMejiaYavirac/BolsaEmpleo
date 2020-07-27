@@ -15,7 +15,7 @@ class CreateCompaniesTable extends Migration
     {
         Schema::connection('pgsql-bolsa_empleo')->create('companies', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('authentication.users');
+            //$table->foreignId('user_id')->constrained('authentication.users');
             $table->string('identity');
             $table->string('nature');
             $table->string('email');

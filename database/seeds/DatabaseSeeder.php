@@ -527,18 +527,18 @@ class DatabaseSeeder extends Seeder
     ]);
 
     factory(App\User::class)->create([
-        'identification' =>'1740565843',
-        'postal_code' =>'444',
-        'first_name' =>'Ana',
-        'second_name' =>'Gabriel',
-        'first_lastname'=>'Gabriel',
-        'second_lastname' =>'Gabriel',
-        'personal_email' =>'Gabriel@gmail.com',
-        'birthdate' =>'2020/12/12',
-        'user_name' =>'Gabriel',
-        'email' =>'Gabriel@gmail.com',
+        'identification' =>'1726850660',
+        'postal_code' =>'170105',
+        'first_name' =>'Armando',
+        'second_name' =>'Telmo',
+        'first_lastname'=>'Cajilema',
+        'second_lastname' =>'Cuji',
+        'personal_email' =>'armandotcajilema@gmail.com',
+        'birthdate' =>'2020/08/21',
+        'user_name' =>'Pachuka',
+        'email' =>'atc.cajilema@yavirac.edu.ec',
         'email_verified_at'=>null,
-        'password' =>'12334',
+        'password' =>'12345',
         'ethnic_origin_id'=>1,
         'location_id'=>1,
         'identification_type_id'=>1,
@@ -548,5 +548,8 @@ class DatabaseSeeder extends Seeder
         'state_id'=>1,
 
     ]);
+
+    $this->call(ProfessionalSeeder::class);
     }
+
 }

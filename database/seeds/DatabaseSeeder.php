@@ -551,6 +551,6 @@ class DatabaseSeeder extends Seeder
 
     $this->call(ProfessionalSeeder::class);
     $this->call(CompanySeeder::class);
+    $this->call(OfferSeeder::class);
     }
-
 }

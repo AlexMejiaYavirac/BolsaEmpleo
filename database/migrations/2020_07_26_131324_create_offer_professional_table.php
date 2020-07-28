@@ -13,7 +13,7 @@ class CreateOfferProfessionalTable extends Migration
      */
     public function up()
     {
-        Schema::connection('pgsql-bolsa_empleo')->create('offer_professional', function (Blueprint $table) {
+        Schema::connection('pgsql-bolsa_empleo')->create('offer_professionals', function (Blueprint $table) {
             $table->id();
             $table->foreignId('offer_id')->constrained('offers');
             $table->foreignId('professional_id')->constrained('professionals');
@@ -29,6 +29,6 @@ class CreateOfferProfessionalTable extends Migration
      */
     public function down()
     {
-        Schema::connection('pgsql-bolsa_empleo')->dropIfExists('offer_professional');
+        Schema::connection('pgsql-bolsa_empleo')->dropIfExists('offer_professionals');
     }
 }

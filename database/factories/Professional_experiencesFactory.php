@@ -11,7 +11,7 @@ $factory->define(App\Professional_experiences::class, function (Faker $faker) {
     $job_description =  $faker->text($maxNbChars = 200);
     $start_date = $faker->date($format = 'Y-m-d', $max = 'now');
     $finish_date = $faker->date($format = 'Y-m-d', $min = 'now');
-    $reason_leave = $faker->paragraph($nbSentences = 3, $variableNbSentences = true);
+    $reason_leave = $faker->text($maxNbChars = 200);
     
     
 

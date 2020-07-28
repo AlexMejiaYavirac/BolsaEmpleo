@@ -13,7 +13,7 @@ class CreateProfessionalReferencesTable extends Migration
      */
     public function up()
     {
-        Schema::connection('pgsql-bolsa_empleo')->create('company_professional', function (Blueprint $table) {
+        Schema::connection('pgsql-bolsa_empleo')->create('professional_references', function (Blueprint $table) {
             $table->id();
             $table->foreignId('company_id')->constrained('companies');
             $table->foreignId('professional_id')->constrained('professionals');
@@ -29,6 +29,6 @@ class CreateProfessionalReferencesTable extends Migration
      */
     public function down()
     {
-        Schema::connection('pgsql-bolsa_empleo')->dropIfExists('company_professional');
+        Schema::connection('pgsql-bolsa_empleo')->dropIfExists('professional_references');
     }
 }

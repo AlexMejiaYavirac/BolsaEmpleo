@@ -552,5 +552,7 @@ class DatabaseSeeder extends Seeder
     $this->call(ProfessionalSeeder::class);
     $this->call(CompanySeeder::class);
     $this->call(OfferSeeder::class);
+    $this->call(Professional_referencesSeeder::class);
+    $this->call(Professional_experiencesSeeder::class);
     }
 }
